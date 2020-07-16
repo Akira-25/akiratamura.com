@@ -8,6 +8,7 @@ export default function Blog() {
   return (
     <View style={styles.container}>
       <Headline>Blog</Headline>
+      <Headline>Comming soon</Headline>
     </View>
   );
 }

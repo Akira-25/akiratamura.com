@@ -1,3 +1,4 @@
+/*
 import 'react-native-gesture-handler';
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -41,8 +42,6 @@ export function AppsStackNavigator() {
       <S.Screen name="SimpleNotes" component={SimpleNotes} />
       <S.Screen name="App2" component={App2} />
       <S.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
-      {/* <S.Screen name="PrivacyPolicy" component={PP_SimpleNotes} options={HMI} /> */}
-      {/* <S.Screen name="表示される＋画面遷移で使う" component={importとexportに同じ} options={HMI} /> */}
     </S.Navigator>
   );
 }
@@ -64,3 +63,4 @@ const styles = ({
     },
   },
 });
+*/

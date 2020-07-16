@@ -8,7 +8,7 @@ export default function SimpleNotes({ navigation }) {
   return (
     <View style={styles.container}>
       <Headline>SimpleNotes</Headline>
-      <Text onPress={() => navigation.navigate('PrivacyPolicy')}>
+      <Text onPress={() => navigation.navigate('PrivacyPolicyScreen')}>
         PrivacyPolicy
       </Text>
 

@@ -5,28 +5,24 @@ import {
   ScrollView, View,
 } from 'react-native';
 
-import CardComponent from '../components/Card';
+import CardComponent from '../../components/Card';
 
-export default function MyApps({ navigation }) {
+export default function Applications({ navigation }) {
   return (
     <ScrollView>
       <View>
 
         <CardComponent
-          onPress={() => {
-            navigation.navigate('SimpleNotes');
-          }}
+          onPress={() => { navigation.navigate('SimpleNotes'); }}
           title="SimpleNotes"
           paragraph="explanation about SN"
         />
 
-        <CardComponent
-          onPress={() => {
-            navigation.navigate('App2');
-          }}
+        { /* <CardComponent
+          onPress={() => { navigation.navigate('App2StackScreen'); }}
           title="App2"
           paragraph="explanation about App2"
-        />
+        /> */ }
 
       </View>
     </ScrollView>

@@ -8,7 +8,7 @@ export default function About() {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.scrollView}>
-        <Headline>About</Headline>
+        <Headline>Akira</Headline>
       </ScrollView>
     </View>
   );
