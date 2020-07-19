@@ -1,45 +1,43 @@
+// ここのスタイリングはあとでなんとかすること
 import 'react-native-gesture-handler';
-
 import * as React from 'react';
 import { ScrollView, View, StyleSheet } from 'react-native';
-
 import HTML from 'react-native-render-html';
 
 import { Linking } from 'expo';
 
-import useIsLargeScreen from '../../../hooks/IsLargeScreen';
+import useIsWindow from '../../../hooks/WindowDimensions';
+import GoBackBar from '../../../elements/GoBackBar';
 
-export default function PrivacyPolicy() {
-  const IsLargeScreen = useIsLargeScreen();
-  const ContainerStyles = IsLargeScreen ? styles.viewLarge : styles.viewSmall;
+export default function PrivacyPolicy({ navigation }) {
+  const { isWideWindow } = useIsWindow();
+
+  const styles = StyleSheet.create({
+    htmlContainer: {
+      flex: 1,
+      left: 0,
+      right: 0,
+      backgroundColor: '#fff',
+      alignSelf: 'center',
+      marginHorizontal: 50,
+      width: (isWideWindow ? 'auto' : 300),
+    },
+  });
+
+  const handleGoBack = () => navigation.navigate('SimpleNotes');
+  const handleLinkPress = (event, href) => { Linking.openURL(href); };
+
   return (
-    <ScrollView>
-      <View style={ContainerStyles}>
-        <HTML
-          html={htmlContent}
-          onLinkPress={(event, href) => { Linking.openURL(href); }} // expoのlinkingを使う
-        />
-      </View>
-    </ScrollView>
+    <View style={{ flex: 1 }}>
+      <GoBackBar onPress={handleGoBack} />
+      <ScrollView style={{ flex: 1 }}>
+        <ScrollView style={styles.htmlContainer}>
+          <HTML html={htmlContent} onLinkPress={handleLinkPress} />
+        </ScrollView>
+      </ScrollView>
+    </View>
   );
 }
-
-const styles = StyleSheet.create({
-  viewLarge: {
-    flex: 1,
-    backgroundColor: '#fff',
-    marginHorizontal: 50,
-    width: 'auto',
-    alignSelf: 'center',
-  },
-  viewSmall: {
-    flex: 1,
-    backgroundColor: '#fff',
-    marginHorizontal: 50,
-    width: 300,
-    alignSelf: 'center',
-  },
-});
 
 const htmlContent = `
 <!DOCTYPE html>

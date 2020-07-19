@@ -1,33 +1,36 @@
 import 'react-native-gesture-handler';
 
 import React from 'react';
-import {
-  ScrollView, View,
-} from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 
-import CardComponent from '../../components/Card';
+import SimpleNotesCard from './simplenotes/SimpleNotesCard';
 
 export default function Applications({ navigation }) {
+  const handleGoTo = ({
+    simpleNotes: () => { navigation.navigate('StackSimpleNotes'); },
+    /* ここにアプリが増えていく */
+    /*       .           */
+    /*       .           */
+    /*       .           */
+  });
+
   return (
-    <ScrollView>
-      <View>
-
-        <CardComponent
-          onPress={() => { navigation.navigate('SimpleNotes'); }}
-          title="SimpleNotes"
-          paragraph="explanation about SN"
-        />
-
-        { /* <CardComponent
-          onPress={() => { navigation.navigate('App2StackScreen'); }}
-          title="App2"
-          paragraph="explanation about App2"
-        /> */ }
-
-      </View>
+    <ScrollView style={styles.container}>
+      <SimpleNotesCard onPress={handleGoTo.simpleNotes} />
+      {/* ここにアプリが増えていく */}
+      {/*       .           */}
+      {/*       .           */}
+      {/*       .           */}
     </ScrollView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
+  },
+});
 
 /*
  style={styles.container}
