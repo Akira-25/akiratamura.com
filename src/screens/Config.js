@@ -19,10 +19,11 @@ export default function CONFIG() {
         AppsScreen: 'apps',
       },
     },
-    // リンクを残したい画面
+    // ---SimpleNotes
     StackSimpleNotes: 'simplenotes',
     SimpleNotes: 'home',
     PrivacyPolicy: 'privacypolicy',
+    // ---Another App..
   });
 }
 
