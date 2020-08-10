@@ -23,8 +23,6 @@ import CONFIG from './src/screens/Config';
 // firebase/firestore -------------------------------------------------
 import ENV from './env.json';
 
-require('firebase/firestore');
-
 const firebaseConfig = {
   apiKey: ENV.FIREBASE_API_KEY,
   authDomain: ENV.FIREBASE_AUTH_DOMAIN,
@@ -35,11 +33,16 @@ const firebaseConfig = {
   appId: ENV.FIREBASE_APP_ID,
   measurementId: ENV.FIREBASE_MEASUREMENT_ID,
 };
+
+require('firebase/firestore');
+require('firebase/analytics');
+
 firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 //  -----------------------------------------------------------------------
 function headerMenuIcon({ navigation }) {
-  const open = () => navigation.openDrawer();
-  return <Icon.Button name="ios-menu" size={30} backgroundColor="#4E94B9" onPress={open} />;
+  const openDrawer = () => navigation.openDrawer();
+  return <Icon.Button name="ios-menu" size={30} backgroundColor="#4E94B9" onPress={openDrawer} />;
 }
 // StackNavigator -----------------------------------------------------------------------
 const S = createStackNavigator();
