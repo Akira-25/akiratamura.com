@@ -30,6 +30,7 @@
     "node-fetch": "^2.6.1",
     "node-forge": "^0.10.0",
     "node-notifier": "^8.0.1",
+    "path-parse": "^1.0.7",
     "react": "16.11.0",
     "react-dom": "16.11.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
