@@ -21,6 +21,7 @@
     "@react-navigation/stack": "^5.6.2",
     "expo": "^38.0.0",
     "firebase": "7.9.0",
+    "glob-parent": "^5.1.2",
     "google-auth-library": "^6.0.3",
     "hosted-git-info": "^2.8.9",
     "lodash": "^4.17.21",
