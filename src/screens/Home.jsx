@@ -13,6 +13,7 @@ export default function Home() {
         <Headline> Home </Headline>
         <Paragraph>
           {`
+            test
             このページは主に、
               -React Native Web
               -React Navigation v5
