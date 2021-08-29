@@ -21,6 +21,8 @@
     "expo": "^38.0.0",
     "firebase": "7.9.0",
     "google-auth-library": "^6.0.3",
+    "hosted-git-info": "^2.8.9",
+    "lodash": "^4.17.21",
     "logkitty": "^0.7.1",
     "mem": "^6.1.0",
     "node-fetch": "^2.6.1",
