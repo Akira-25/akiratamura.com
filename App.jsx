@@ -1,3 +1,4 @@
+// clone
 import 'react-native-gesture-handler';
 import * as React from 'react';
 import * as firebase from 'firebase/app';
